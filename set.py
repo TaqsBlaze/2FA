@@ -8,7 +8,7 @@ class SetUser:
 
     def __init__(self,details:dict):
         self.details = details
-        self.db = sql.connect("resources/94KEzWo.db")
+        self.db = sql.connect("resources/94KEzWo.sqlite3")
         self.cursor = self.db.cursor()
 
 
@@ -19,7 +19,7 @@ class SetUser:
             INSERT INTO user (password, email, recovery) VALUES (?,?,?)
             '''
 
-            salt = bcrypt.gensalt(rounds = 18)
+            salt = bcrypt.gensalt(rounds = 5)
             hash = bcrypt.hashpw(self.details['password'].encode('utf-8'), salt = salt)
             details = (hash,self.details['email'],self.details['recovery'])
 

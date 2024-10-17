@@ -4,13 +4,17 @@ import sqlite3 as sql
 
 
 class ResourcesCheck:
-
+    """
+    Description:
+    ResourcesCheck is a module for checking is necesury resources such as aoolication
+    files are present in application directory/files system
+    """
 
     def check_db_resource():
         """
         Checking if database file exists in application files
         """
-        if os.path.isfile("resources/94KEzWo.db"):
+        if os.path.isfile("resources/94KEzWo.sqlite3"):
 
             return {'status':True,"message":"Databse exists"}
         
@@ -43,7 +47,7 @@ class ResourcesCheck:
         """
         try:
 
-            db  = sql.connect("resources/94KEzWo.db")
+            db  = sql.connect("resources/94KEzWo.sqlite3")
             # Create a cursor object
             cursor = db.cursor()
 

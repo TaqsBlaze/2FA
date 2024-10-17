@@ -10,7 +10,7 @@ class Authentication:
 
     def __init__(self, password):
         self.password = password
-        self.db = sql.connect("resources/94KEzWo.db")
+        self.db = sql.connect("resources/94KEzWo.sqlite3")
         self.cursor = self.db.cursor()
 
         
