@@ -44,7 +44,7 @@ else:
                         if result['status']:
                             self.message.setText(f"{result['message']}")
                             QtWidgets.QApplication.quit()
-                            pass
+                            
                         else:
                             self.message.setText(f"{result['message']} {result['debug_msg']}")
                             self.message.show()
