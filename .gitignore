@@ -1,4 +1,9 @@
-# Byte-compiled / optimized / DLL files
+*.db
+*.sqlite3
+*.sql
+*.sqlite
+
+__py# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>locked-computer.png</file>
+    <file>shield.png</file>
+  </qresource>
+</RCC>
